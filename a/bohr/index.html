@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bohr's Triangles</title>
+<style type="text/css">
+    body {
+        background-color: #333;
+    }
+    #game {
+        width: 640px;
+        height: 640px;
+        margin: auto;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    #gameControls {
+        display:none;
+        width: 478px;
+        color: white;
+        position:absolute;
+        top:320px
+    }
+    #gameControls table {
+        width: 100%;
+    }
+    #gameControls button {
+        width: 43%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    #numObjectsInput {
+        width: 4em;
+    }
+    #gameControls td.input {
+        width: 17%;
+    }
+    #gameControls td.label {
+        width: 8%;
+    }
+    .explain {
+        color: #aaa;
+    }
+</style>
+</head>
+<body>
+<div id="game">
+    <canvas id="canvas" width="640px" height="640px">
+        Canvas is not supported in your browser.
+    </canvas>
+    <div id="gameControls">
+        <table>
+            <tr>
+                <td class="label">v = </td>
+                <td class="input"><span id="vSpan"></span></td>
+                
+                <td class="label">a = </td>
+                <td class="input"><span id="aSpan"></span></td>
+                
+                <td class="label">_ = </td>
+                <td class="input"><span id="_Span"></span></td>
+                
+                <td class="label">- = </td>
+                <td class="input"><span id="-Span"></span></td>
+            </tr>
+        </table> 
+    </div>   
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="game.js"></script>
+<script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var dom = {
+        vSpan: document.getElementById('vSpan'),
+        aSpan: document.getElementById('aSpan')
+    };
+    var g = game.create(canvas, dom);
+    g.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Because of the varying velocities the individual triangles have dependent on their distance from the gravitational center, the collection of 500 objects that look like a single line eventually dissolves into a more and more chaotic state.

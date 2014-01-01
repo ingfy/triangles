@@ -1,0 +1,1 @@
+Here the triangles move only two and from the center, not perpendicularly.
